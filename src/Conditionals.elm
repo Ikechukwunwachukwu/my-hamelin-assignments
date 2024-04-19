@@ -185,3 +185,35 @@ getGiftFortheDay day =
 
         _ ->
             "Invalid Day"
+
+
+-- Exercise 5: Valid Date Checker using ifElse
+
+
+checkValidDate : String -> Int -> String
+checkValidDate month day =
+    if month == "January" || month == "March" || month == "May" || month == "July" || month == "August" || month == "October" || month == "December" then
+        if day >= 1 && day <= 31 then
+            "Valid Date"
+
+        else
+            "Invalid Date: " ++ month ++ " has only 31 days"
+
+    else if month == "April" || month == "June" || month == "September" || month == "November" then
+        if day >= 1 && day <= 30 then
+            "Valid Date"
+
+        else
+            "Invalid Date: " ++ month ++ " has only 30 days"
+
+    else if month == "February" then
+        if day >= 1 && day <= 28 then
+            "Valid Date"
+
+        else
+            "Invalid Date: February has only 28 days"
+
+    else
+        "Invalid Date: '" ++ month ++ "' is not a valid month"
+
+
