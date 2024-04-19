@@ -49,3 +49,21 @@ areaOfCircle radius =
 calculateAreas : List Float -> List Float
 calculateAreas radii =
     List.map areaOfCircle radii
+
+
+
+--Exercise 4: Calculate Volumes of Cubes/Cuboids
+--Task: Given a list of records with dimensions of type Dimensions,
+--calculate the volume for each cuboid.
+
+
+type alias Dimensions =
+    { length : Float
+    , height : Float
+    , breadth : Float
+    }
+
+
+volume : Dimensions -> Float
+volume dimensions =
+    dimensions.length * dimensions.height * dimensions.breadth
