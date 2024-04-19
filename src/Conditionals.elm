@@ -534,3 +534,31 @@ identifyDayMood day =
     else
         "Is that a public holiday?"
 
+
+
+findDayMood : String -> String
+findDayMood day =
+    case day of
+        "Monday" ->
+            "Back to the grind!"
+
+        "Tuesday" ->
+            "Just another day in the grind"
+
+        "Wednesday" ->
+            "Just another day in the grind"
+
+        "Thursday" ->
+            "Just another day in the grind"
+
+        "Friday" ->
+            "TGIF!"
+
+        "Saturday" ->
+            "It's the weekend, baby!"
+
+        "Sunday" ->
+            "It's the weekend, baby!"
+
+        _ ->
+            "Is that a public holiday?"
