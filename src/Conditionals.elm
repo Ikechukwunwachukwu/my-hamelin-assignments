@@ -63,3 +63,35 @@ categorizeCharacter char =
 
     else
         "Unknown"
+
+    
+
+    -- Exercise 3: Age Group Classifier using ifElse
+
+
+classifyAge : Int -> String
+classifyAge age =
+    if age < 0 then
+        "Invalid Age"
+
+    else if age <= 12 then
+        "Child"
+
+    else if age <= 19 then
+        "Teenager"
+
+    else if age <= 64 then
+        "Adult"
+
+    else if age <= 122 then
+        "Senior"
+
+    else if age <= 968 then
+        "Guinness World Records, let's goooooooo!"
+
+    else if age >= 969 then
+        "Methuselah?!"
+
+    else
+        "Invalid Age"
+
