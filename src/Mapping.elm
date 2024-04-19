@@ -130,3 +130,17 @@ tagLength str =
 tagLengths : List String -> List ( String, Int )
 tagLengths strings =
     List.map tagLength strings
+
+
+--Exercise 8: Append Index
+--Task: Append the index of each element to the element itself in a list of strings.
+
+
+appendIndexForOne : Int -> String -> String
+appendIndexForOne index string =
+    string ++ " " ++ String.fromInt index
+
+
+appendIndexForAll : List String -> List String
+appendIndexForAll strings =
+    List.indexedMap appendIndexForOne strings
