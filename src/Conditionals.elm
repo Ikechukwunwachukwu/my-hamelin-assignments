@@ -511,3 +511,26 @@ fizzBuzzTwist number =
     else
         String.fromInt number
 
+
+
+--Exercise 10: Weekday Moods
+--A function to identify the typical mood associated with each day of the week using if-else statements
+
+
+identifyDayMood : String -> String
+identifyDayMood day =
+    if day == "Monday" then
+        "Back to the grind!"
+
+    else if day == "Tuesday" || day == "Wednesday" || day == "Thursday" then
+        "Just another day in the grind"
+
+    else if day == "Friday" then
+        "TGIF!"
+
+    else if day == "Saturday" || day == "Sunday" then
+        "It's the weekend, baby!"
+
+    else
+        "Is that a public holiday?"
+
