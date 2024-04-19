@@ -337,7 +337,7 @@ convertStringsToBool strings =
 --(each person having a name, year of birth, and gender), and returns a list
 --showing only the ages each person will be in that year. If a person was not born by that year,
 --their age should be reported as 0.
---Type definition for a person
+
 
 
 type alias Person =
@@ -348,7 +348,6 @@ type alias Person =
 
 
 -- Function to calculate the age of a person in a specific year
-
 
 calculateAge : Int -> Person -> Int
 calculateAge currentYear person =
@@ -366,3 +365,32 @@ calculateAge currentYear person =
 calculateAges : Int -> List Person -> List Int
 calculateAges currentYear people =
     List.map (calculateAge currentYear) people
+
+
+--Exercise 20: Calculate Future Ages (version 2)
+--Task: Write a function that takes a specific year and a list of people
+--(each person having a name, year of birth, and gender), and returns a list
+--showing tuples of each person's name and age they will be in that year.
+--If a person was not born by that year, their age should be reported as 0.
+--Type definition for a person
+-- Function to calculate the age of a person in a specific year
+
+
+ageCalculate : Int -> Person -> ( String, Int )
+ageCalculate currentYear person =
+    ( person.name
+    , if currentYear >= person.yearOfBirth then
+        currentYear - person.yearOfBirth
+
+      else
+        0
+    )
+
+
+
+-- Function to calculate the ages of people in a list for a specific year
+
+
+agesCalculate : Int -> List Person -> List ( String, Int )
+agesCalculate currentYear people =
+    List.map (ageCalculate currentYear) people
