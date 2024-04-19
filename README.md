@@ -1,3 +1,3 @@
-# Hamelin Assignments
+# My Hamelin Assignments
 
-This is a repository for my solutions at Hamelin.
+This is a repository for keeping solutions to assignments at Hamelin.
