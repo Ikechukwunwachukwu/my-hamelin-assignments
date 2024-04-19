@@ -87,3 +87,17 @@ data =
 volumes : List Float
 volumes =
     List.map volume data
+
+
+--Exercise 5: Uppercase Strings
+--Task: Convert all strings in a list to uppercase.
+
+
+stringToUpper : String -> String
+stringToUpper string =
+    String.toUpper string
+
+
+stringsToUpper : List String -> List String
+stringsToUpper listStrings =
+    List.map stringToUpper listStrings
