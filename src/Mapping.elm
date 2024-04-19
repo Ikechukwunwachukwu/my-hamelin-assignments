@@ -261,3 +261,19 @@ replaceEmptyStringsWithPlaceholder : List String -> List String
 replaceEmptyStringsWithPlaceholder strings =
     List.map placeholderFromEmptyString strings
 
+
+--Exercise 15: Normalize Text
+--Task: Sanitize strings in a list by trimming whitespace
+--and converting text to lowercase.
+
+
+sanitizeString : String -> String
+sanitizeString string =
+    String.trim string
+        |> String.toLower
+
+
+sanitizeStrings : List String -> List String
+sanitizeStrings strings =
+    List.map sanitizeString strings
+
