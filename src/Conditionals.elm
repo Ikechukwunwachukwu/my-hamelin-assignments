@@ -22,3 +22,44 @@ calculateGrade score =
 
     else
         "F"
+
+
+
+
+--Exercise 2: Character Categorizer using an if-else expression
+
+
+categorizeCharacter : Char -> String
+categorizeCharacter char =
+    if
+        char
+            == 'a'
+            || char
+            == 'e'
+            || char
+            == 'i'
+            || char
+            == 'o'
+            || char
+            == 'u'
+            || char
+            == 'A'
+            || char
+            == 'E'
+            || char
+            == 'I'
+            || char
+            == 'O'
+            || char
+            == 'U'
+    then
+        "Vowel"
+
+    else if Char.isDigit char then
+        "Digit"
+
+    else if (char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z') then
+        "Consonant"
+
+    else
+        "Unknown"
