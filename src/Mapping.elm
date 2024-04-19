@@ -101,3 +101,17 @@ stringToUpper string =
 stringsToUpper : List String -> List String
 stringsToUpper listStrings =
     List.map stringToUpper listStrings
+
+
+--Exercise 6: Calculate Square Roots
+--Task: Return the square roots of a list of numbers.
+
+
+returnSquareRoot : Float -> Float
+returnSquareRoot num =
+    sqrt num
+
+
+returnSquareRoots : List Float -> List Float
+returnSquareRoots numbers =
+    List.map returnSquareRoot numbers
