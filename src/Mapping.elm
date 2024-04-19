@@ -242,3 +242,22 @@ calculateLog number =
 calculateLogs : List Float -> List Float
 calculateLogs numbers =
     List.map calculateLog numbers
+
+
+--Exercise 14: Replace Empty String with Placeholder
+--Task: Replace empty strings in a list with "Placeholder".
+
+
+placeholderFromEmptyString : String -> String
+placeholderFromEmptyString str =
+    if String.isEmpty str then
+        "Placeholder"
+
+    else
+        str
+
+
+replaceEmptyStringsWithPlaceholder : List String -> List String
+replaceEmptyStringsWithPlaceholder strings =
+    List.map placeholderFromEmptyString strings
+
