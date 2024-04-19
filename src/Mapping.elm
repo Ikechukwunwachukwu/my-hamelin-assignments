@@ -115,3 +115,18 @@ returnSquareRoot num =
 returnSquareRoots : List Float -> List Float
 returnSquareRoots numbers =
     List.map returnSquareRoot numbers
+
+
+
+--Exercise 7: Tag Length
+--Task: Return the length of each string in a list, along with the original string in a tuple.
+
+
+tagLength : String -> ( String, Int )
+tagLength str =
+    ( str, String.length str )
+
+
+tagLengths : List String -> List ( String, Int )
+tagLengths strings =
+    List.map tagLength strings
