@@ -416,3 +416,49 @@ getMonthName monthNumber =
     else
         "Yeah, right, there's a 13th month!"
 
+
+--Exercise 7: Month Number to Name Converter
+-- A function to return the name of the corresponding month using a case expression
+
+
+findMonthName : Int -> String
+findMonthName monthNumber =
+    case monthNumber of
+        1 ->
+            "January"
+
+        2 ->
+            "February"
+
+        3 ->
+            "March"
+
+        4 ->
+            "April"
+
+        5 ->
+            "May"
+
+        6 ->
+            "June"
+
+        7 ->
+            "July"
+
+        8 ->
+            "August"
+
+        9 ->
+            "September"
+
+        10 ->
+            "October"
+
+        11 ->
+            "November"
+
+        12 ->
+            "December"
+
+        _ ->
+            "Yeah, right, there's a 13th month!"
