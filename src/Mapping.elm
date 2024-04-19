@@ -287,3 +287,19 @@ findLengths strings =
     List.map String.length strings
 
 
+--Exercise 17: Append "day"
+--Task: Append "day" to the end of each string in a list
+--representing shortened or non-standard days of the week.
+
+
+appendDay : String -> String
+appendDay str =
+    str ++ "day"
+
+
+appendDayToList : List String -> List String
+appendDayToList strings =
+    List.map appendDay strings
+
+
+
