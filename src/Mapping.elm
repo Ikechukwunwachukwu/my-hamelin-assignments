@@ -30,3 +30,22 @@ boolToString bool =
 stringFromBool : List Bool -> List String
 stringFromBool listBool =
     List.map boolToString listBool
+
+
+--Exercise 3: Calculate Areas of Circles
+--Task: Given a list of circle radii, calculate the area for each corresponding circle. 
+
+
+
+areaOfCircle : Float -> Float
+areaOfCircle radius =
+    let
+        pi =
+            3.14159
+    in
+    pi * radius * radius
+
+
+calculateAreas : List Float -> List Float
+calculateAreas radii =
+    List.map areaOfCircle radii
