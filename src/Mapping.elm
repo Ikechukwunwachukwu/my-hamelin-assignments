@@ -144,3 +144,18 @@ appendIndexForOne index string =
 appendIndexForAll : List String -> List String
 appendIndexForAll strings =
     List.indexedMap appendIndexForOne strings
+
+
+--Exercise 9: Invert Booleans
+--Task: Invert each boolean value in a list.
+
+
+invertBoolean : Bool -> Bool
+invertBoolean bool =
+    not bool
+
+
+invertBooleans : List Bool -> List Bool
+invertBooleans bools =
+    List.map invertBoolean bools
+
