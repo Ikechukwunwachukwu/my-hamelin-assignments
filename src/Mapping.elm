@@ -12,3 +12,21 @@ double number =
 doubleNumber : List Int -> List Int
 doubleNumber numbers =
     List.map double numbers
+
+
+--Exercise 2: Convert Boolean to String
+--Task: Convert each boolean in a list to its string representation ("true" or "false").
+
+
+boolToString : Bool -> String
+boolToString bool =
+    if bool then
+        "True"
+
+    else
+        "False"
+
+
+stringFromBool : List Bool -> List String
+stringFromBool listBool =
+    List.map boolToString listBool
