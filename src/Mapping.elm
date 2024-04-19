@@ -159,3 +159,42 @@ invertBooleans : List Bool -> List Bool
 invertBooleans bools =
     List.map invertBoolean bools
 
+
+--Exercise 10: Format Product Display with Currency
+--Task: Given a list of items, each with an amount
+--and a currency (spelled out as "Dollars", "Pounds", "Euros"),
+--format them into strings that show the currency symbol
+--followed by the amount.
+
+
+type alias PriceItem =
+    { amount : Float
+    , currency : String
+    }
+
+
+
+-- Function to format a single PriceItem into a string
+
+formatOnePriceItem : PriceItem -> String
+formatOnePriceItem item =
+    case item.currency of
+        "Dollars" ->
+            "$" ++ String.fromFloat item.amount
+
+        "Pounds" ->
+            "£" ++ String.fromFloat item.amount
+
+        "Euros" ->
+            "€" ++ String.fromFloat item.amount
+
+        _ ->
+            "Unknown currency"
+
+
+-- Function to format a list of PriceItems into a list of strings
+
+
+formatPriceItems : List PriceItem -> List String
+formatPriceItems items =
+    List.map formatOnePriceItem items
