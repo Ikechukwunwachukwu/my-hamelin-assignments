@@ -278,4 +278,12 @@ sanitizeStrings strings =
     List.map sanitizeString strings
 
 
+--Exercise 16: Find Length
+--Task: Return the length of each string in a list.
+
+
+findLengths : List String -> List Int
+findLengths strings =
+    List.map String.length strings
+
 
