@@ -332,3 +332,42 @@ simulateTrafficLight colour =
 
 
 
+--Exercise 6: Traffic Light Simulator
+--A function to simulate a traffic light using if-else statements
+
+
+simulateTrafficLight : String -> String
+simulateTrafficLight colour =
+    if colour == "Red" then
+        "Stop"
+
+    else if colour == "Yellow" then
+        "Prepare to stop"
+
+    else if colour == "Green" then
+        "Go"
+
+    else
+        colour ++ "? Gurl, Are we on Mars? I need a break!"
+
+
+
+--Exercise 6: Traffic Light Simulator
+--A function to simulate a traffic light using a case expression
+
+
+trafficLightSimulator : String -> String
+trafficLightSimulator colour =
+    case colour of
+        "Red" ->
+            "Stop"
+
+        "Yellow" ->
+            "Prepare to stop"
+
+        "Green" ->
+            "Go"
+
+        _ ->
+            colour ++ "? Gurl, Are we on Mars? I need a break!"
+
