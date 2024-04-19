@@ -310,3 +310,25 @@ checkCorrectDate month day =
 
         _ ->
             "Invalid Date: '" ++ month ++ "' is not a valid month"
+
+
+--Exercise 6: Traffic Light Simulator
+--A function to simulate a traffic light using if-else statements
+
+
+simulateTrafficLight : String -> String
+simulateTrafficLight colour =
+    if colour == "Red" then
+        "Stop"
+
+    else if colour == "Yellow" then
+        "Prepare to stop"
+
+    else if colour == "Green" then
+        "Go"
+
+    else
+        colour ++ "? Gurl, Are we on Mars? I need a break!"
+
+
+
