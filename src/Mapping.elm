@@ -228,3 +228,17 @@ wrapListWithPTags : List String -> List String
 wrapListWithPTags strings =
     List.map wrapWithPTags strings
 
+
+
+--Exercise 13: Calculate Logarithms
+--Task: Calculate the natural logarithm of each number in a list.
+
+
+calculateLog : Float -> Float
+calculateLog number =
+    logBase e number
+
+
+calculateLogs : List Float -> List Float
+calculateLogs numbers =
+    List.map calculateLog numbers
