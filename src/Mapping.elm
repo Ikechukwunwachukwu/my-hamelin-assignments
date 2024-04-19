@@ -212,3 +212,19 @@ multiplyByIndex index number =
 multiplyByIndexes : List Int -> List Int
 multiplyByIndexes numbers =
     List.indexedMap multiplyByIndex numbers
+
+
+
+--Exercise 12: Generate HTML Tags
+--Task: Wrap each string in a list with HTML <p> tags.
+
+
+wrapWithPTags : String -> String
+wrapWithPTags str =
+    "<p>" ++ str ++ "</p>"
+
+
+wrapListWithPTags : List String -> List String
+wrapListWithPTags strings =
+    List.map wrapWithPTags strings
+
