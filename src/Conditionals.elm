@@ -462,3 +462,27 @@ findMonthName monthNumber =
 
         _ ->
             "Yeah, right, there's a 13th month!"
+
+
+--Exercise 8: 24-hour to 12-hour Format Converter
+-- A function to convert 24-hour format to 12-hour format using if-else statements
+
+
+change24HourTo12Hour : Int -> ( Int, String )
+change24HourTo12Hour hour =
+    if hour >= 0 && hour <= 23 then
+        if hour == 0 then
+            ( 12, "AM" )
+
+        else if hour < 12 then
+            ( hour, "AM" )
+
+        else if hour == 12 then
+            ( 12, "PM" )
+
+        else
+            ( hour - 12, "PM" )
+
+    else
+        ( -1, "Extra time? Wake up, This isn't football, hun!" )
+
