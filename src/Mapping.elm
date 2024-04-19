@@ -302,4 +302,31 @@ appendDayToList strings =
     List.map appendDay strings
 
 
+--Exercise 18: Convert Extended String to Boolean
+--Task: Convert each string in a list to its boolean
+--representation, considering extended variations such as
+--"true", "yes", "y", "1" for True and "false", "no", "n", "0" for False.
+--Case should not affect the conversion.
 
+
+stringToBool : String -> Bool
+stringToBool str =
+    case String.toLower str of
+        "true" ->
+            True
+
+        "yes" ->
+            True
+
+        "y" ->
+            True
+
+        "1" ->
+            True
+
+        _ ->
+            False
+
+convertStringsToBool : List String -> List Bool
+convertStringsToBool strings =
+    List.map stringToBool strings
