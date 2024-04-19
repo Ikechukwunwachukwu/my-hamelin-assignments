@@ -198,3 +198,17 @@ formatOnePriceItem item =
 formatPriceItems : List PriceItem -> List String
 formatPriceItems items =
     List.map formatOnePriceItem items
+
+
+--Exercise 11: Multiply by Index
+--Task: Multiply each number in a list by its index.
+
+
+multiplyByIndex : Int -> Int -> Int
+multiplyByIndex index number =
+    index * number
+
+
+multiplyByIndexes : List Int -> List Int
+multiplyByIndexes numbers =
+    List.indexedMap multiplyByIndex numbers
