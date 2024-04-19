@@ -371,3 +371,48 @@ trafficLightSimulator colour =
         _ ->
             colour ++ "? Gurl, Are we on Mars? I need a break!"
 
+--Exercise 7: Month Number to Name Converter
+-- A function to return the name of the corresponding month using if-else statements
+
+
+getMonthName : Int -> String
+getMonthName monthNumber =
+    if monthNumber == 1 then
+        "January"
+
+    else if monthNumber == 2 then
+        "February"
+
+    else if monthNumber == 3 then
+        "March"
+
+    else if monthNumber == 4 then
+        "April"
+
+    else if monthNumber == 5 then
+        "May"
+
+    else if monthNumber == 6 then
+        "June"
+
+    else if monthNumber == 7 then
+        "July"
+
+    else if monthNumber == 8 then
+        "August"
+
+    else if monthNumber == 9 then
+        "September"
+
+    else if monthNumber == 10 then
+        "October"
+
+    else if monthNumber == 11 then
+        "November"
+
+    else if monthNumber == 12 then
+        "December"
+
+    else
+        "Yeah, right, there's a 13th month!"
+
