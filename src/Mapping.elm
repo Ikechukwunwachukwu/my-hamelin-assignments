@@ -38,8 +38,8 @@ stringFromBool listBool =
 --Task: Given a list of circle radii, calculate the area for each corresponding circle.
 
 
-calculateAreaOfCircle : Float -> Float
-calculateAreaOfCircle radius =
+areaOfCircle : Float -> Float
+areaOfCircle radius =
     let
         pi =
             3.14159
@@ -47,9 +47,9 @@ calculateAreaOfCircle radius =
     pi * radius * radius
 
 
-calculateAreaOfCircles : List Float -> List Float
-calculateAreaOfCircles radii =
-    List.map calculateAreaOfCircle radii
+areaOfCircles : List Float -> List Float
+areaOfCircles radii =
+    List.map areaOfCircle radii
 
 
 
@@ -112,11 +112,9 @@ stringsToUpper strings =
 
 
 squareRoot : Float -> Float
-squareRoot num =
-    sqrt num
+squareRoot : List Float -> List Float
 
 
-squareRoots : List Float -> List Float
 squareRoots numbers =
     List.map squareRoot numbers
 
