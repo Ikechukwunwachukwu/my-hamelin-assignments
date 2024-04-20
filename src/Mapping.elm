@@ -102,8 +102,8 @@ stringToUpper string =
 
 
 stringsToUpper : List String -> List String
-stringsToUpper listStrings =
-    List.map stringToUpper listStrings
+stringsToUpper strings =
+    List.map stringToUpper strings
 
 
 
