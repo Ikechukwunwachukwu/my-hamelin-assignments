@@ -71,18 +71,6 @@ volume dimensions =
 
 
 
--- Test sample data
-
-
-data : List Dimensions
-data =
-    [ { length = 2, height = 3, breadth = 4 }
-    , { length = 5, height = 1, breadth = 7 }
-    , { length = 1.5, height = 2.5, breadth = 3.5 }
-    ]
-
-
-
 -- Calculate volumes for each dimension using the map function
 
 
