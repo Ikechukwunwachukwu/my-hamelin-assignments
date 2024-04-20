@@ -40,10 +40,6 @@ stringFromBool booleans =
 
 areaOfCircle : Float -> Float
 areaOfCircle radius =
-    let
-        pi =
-            3.14159
-    in
     pi * radius * radius
 
 
