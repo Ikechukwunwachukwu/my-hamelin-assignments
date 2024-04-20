@@ -259,8 +259,7 @@ emptyStringsToPlaceholders strings =
 
 sanitizeString : String -> String
 sanitizeString string =
-    String.trim string
-        |> String.toLower
+    string |> String.trim |> String.toLower
 
 
 sanitizeStrings : List String -> List String
