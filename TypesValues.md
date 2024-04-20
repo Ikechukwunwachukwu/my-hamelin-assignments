@@ -53,3 +53,59 @@
 24. _("Elm", Just [False, True], ('a', 42))_: **(String, Maybe (List Bool), (Char, Int))**
 
 25. _[["Go", "Java", "Python"], ["Elm", "JavaScript", "C++"], ["HTML", "CSS"]]_ : **List (List String)**
+
+# Part Two:
+
+## Providing Values That Satisfy Specified Types.
+
+### Instructions: For each of the following Elm types, provide three values that satisfy the type.\_
+
+1.  _Int_ : **0, -5, 10, 300**
+
+2.  _Bool_ : **True, False**
+
+3.  _Float_ : **3.14, 0.0, -2.5, 100.2**
+
+4.  _Char_ : **'a', 'Z', '!' '@'**
+
+5.  _[Int]_ : **[1], [-5, 0], [100, 200, 300]**
+
+6.  _String_ : **"Hello", "World", "", "10"**
+
+7.  _List Char_ : **['a', 'b', 'c'], ['N', 'W', 'A', 'N', 'K', 'W', 'O'], ['E', 'l', 'm']**
+
+8.  _(Bool, Char)_ : **(True, 'a'), (False, '&'), (not True, '!')**
+
+9.  _Maybe String_ : **Just "Hello", Nothing, Just ""**
+
+10. _List (Bool, Int)_ : **[(True, 1), (False, 0), (True, -1)]**
+
+11. _Maybe Int_ : **Just 42, Just 1**
+
+12. _List a_ : **[1, 2, 3], ['a', 'b', 'c'], []**
+
+13. _Maybe a_ : **Just 5, Nothing, Just 'x'**
+
+14. _[Bool]_ : **[True], [False, True], [True, False, not True]**
+
+15. _List (Maybe Int)_ : **[Just 42, Nothing, Just (-5)]**
+
+16. _List (Int, Char)_ : **[(1, 'a'), (2, 'B'), (-3, '*')]**
+
+17. _Maybe (Maybe Char)_ : **Just (Just 'a'), Just (Just '+')**
+
+18. _List (Bool, String)_ : **[(True, "Yes"), (False, "No"), (not True, "Maybe")]**
+
+19. _List (Maybe Char)_ : **[Just 'a', Just '$']**
+
+20. _Maybe [Int]_ : **Just [1, 2, 3], Just [-1, -2, -5]**
+
+21. _(String, [Int])_ : **("Elm", [1, 2, 3]), ("Github", [42]), ("", [-6])**
+
+22. _(Int, [Bool], Maybe Char)_ : **(42, [True, False], Just 'a'), (-10, [not True], Just '£')**
+
+23. _Maybe (Maybe Int)_ : **Just (Just 42), Just (Just -10)**
+
+24. _(String, Maybe [Bool], (Char, Int))_ : **("Elm", Just [True, False], ('a', 42)), ("Hello", Just [False], ('!', 0))**
+
+25. _(String, List (Maybe Float))_ : **("Phone", [Just 5.2]), ("Android", [Just 6.7])**
