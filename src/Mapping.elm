@@ -90,14 +90,9 @@ stringsToUpper strings =
 --Task: Return the square roots of a list of numbers.
 
 
-squareRoot : Float -> Float
-squareRoot float =
-    sqrt float
-
-
 squareRoots : List Float -> List Float
 squareRoots floats =
-    List.map squareRoot floats
+    List.map sqrt floats
 
 
 
