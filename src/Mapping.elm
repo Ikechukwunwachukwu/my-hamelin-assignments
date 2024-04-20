@@ -84,14 +84,9 @@ volumes =
 --Task: Convert all strings in a list to uppercase.
 
 
-stringToUpper : String -> String
-stringToUpper string =
-    String.toUpper string
-
-
 stringsToUpper : List String -> List String
 stringsToUpper strings =
-    List.map stringToUpper strings
+    List.map String.toUpper strings
 
 
 
