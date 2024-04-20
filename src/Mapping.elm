@@ -237,8 +237,8 @@ calculateLogs numbers =
 --Task: Replace empty strings in a list with "Placeholder".
 
 
-placeholderFromEmptyString : String -> String
-placeholderFromEmptyString str =
+emptyStringToPlaceholder : String -> String
+emptyStringToPlaceholder str =
     if String.isEmpty str then
         "Placeholder"
 
@@ -246,9 +246,9 @@ placeholderFromEmptyString str =
         str
 
 
-replaceEmptyStringsWithPlaceholder : List String -> List String
-replaceEmptyStringsWithPlaceholder strings =
-    List.map placeholderFromEmptyString strings
+emptyStringsToPlaceholders : List String -> List String
+emptyStringsToPlaceholders strings =
+    List.map emptyStringToPlaceholder strings
 
 
 
