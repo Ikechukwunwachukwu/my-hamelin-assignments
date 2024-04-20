@@ -5,13 +5,14 @@ module Mapping exposing (..)
 
 
 double : Int -> Int
-double number =
-    number * 2
+double integer =
+    integer * 2
 
 
-doubleNumber : List Int -> List Int
-doubleNumber numbers =
-    List.map double numbers
+doubleIntegers : List Int -> List Int
+doubleIntegers integers =
+    List.map double integers
+
 
 
 --Exercise 2: Convert Boolean to String
@@ -32,9 +33,9 @@ stringFromBool listBool =
     List.map boolToString listBool
 
 
---Exercise 3: Calculate Areas of Circles
---Task: Given a list of circle radii, calculate the area for each corresponding circle. 
 
+--Exercise 3: Calculate Areas of Circles
+--Task: Given a list of circle radii, calculate the area for each corresponding circle.
 
 
 areaOfCircle : Float -> Float
@@ -69,6 +70,7 @@ volume dimensions =
     dimensions.length * dimensions.height * dimensions.breadth
 
 
+
 -- Test sample data
 
 
@@ -89,6 +91,7 @@ volumes =
     List.map volume data
 
 
+
 --Exercise 5: Uppercase Strings
 --Task: Convert all strings in a list to uppercase.
 
@@ -101,6 +104,7 @@ stringToUpper string =
 stringsToUpper : List String -> List String
 stringsToUpper listStrings =
     List.map stringToUpper listStrings
+
 
 
 --Exercise 6: Calculate Square Roots
@@ -132,6 +136,7 @@ tagLengths strings =
     List.map tagLength strings
 
 
+
 --Exercise 8: Append Index
 --Task: Append the index of each element to the element itself in a list of strings.
 
@@ -146,6 +151,7 @@ appendIndexForAll strings =
     List.indexedMap appendIndexForOne strings
 
 
+
 --Exercise 9: Invert Booleans
 --Task: Invert each boolean value in a list.
 
@@ -158,6 +164,7 @@ invertBoolean bool =
 invertBooleans : List Bool -> List Bool
 invertBooleans bools =
     List.map invertBoolean bools
+
 
 
 --Exercise 10: Format Product Display with Currency
@@ -176,6 +183,7 @@ type alias PriceItem =
 
 -- Function to format a single PriceItem into a string
 
+
 formatOnePriceItem : PriceItem -> String
 formatOnePriceItem item =
     case item.currency of
@@ -192,12 +200,14 @@ formatOnePriceItem item =
             "Unknown currency"
 
 
+
 -- Function to format a list of PriceItems into a list of strings
 
 
 formatPriceItems : List PriceItem -> List String
 formatPriceItems items =
     List.map formatOnePriceItem items
+
 
 
 --Exercise 11: Multiply by Index
@@ -244,6 +254,7 @@ calculateLogs numbers =
     List.map calculateLog numbers
 
 
+
 --Exercise 14: Replace Empty String with Placeholder
 --Task: Replace empty strings in a list with "Placeholder".
 
@@ -262,6 +273,7 @@ replaceEmptyStringsWithPlaceholder strings =
     List.map placeholderFromEmptyString strings
 
 
+
 --Exercise 15: Normalize Text
 --Task: Sanitize strings in a list by trimming whitespace
 --and converting text to lowercase.
@@ -278,6 +290,7 @@ sanitizeStrings strings =
     List.map sanitizeString strings
 
 
+
 --Exercise 16: Find Length
 --Task: Return the length of each string in a list.
 
@@ -285,6 +298,7 @@ sanitizeStrings strings =
 findLengths : List String -> List Int
 findLengths strings =
     List.map String.length strings
+
 
 
 --Exercise 17: Append "day"
@@ -300,6 +314,7 @@ appendDay str =
 appendDayToList : List String -> List String
 appendDayToList strings =
     List.map appendDay strings
+
 
 
 --Exercise 18: Convert Extended String to Boolean
@@ -327,9 +342,11 @@ stringToBool str =
         _ ->
             False
 
+
 convertStringsToBool : List String -> List Bool
 convertStringsToBool strings =
     List.map stringToBool strings
+
 
 
 --Exercise 19: Calculate Future Ages
@@ -339,7 +356,6 @@ convertStringsToBool strings =
 --their age should be reported as 0.
 
 
-
 type alias Person =
     { name : String
     , yearOfBirth : Int
@@ -347,7 +363,9 @@ type alias Person =
     }
 
 
+
 -- Function to calculate the age of a person in a specific year
+
 
 calculateAge : Int -> Person -> Int
 calculateAge currentYear person =
@@ -365,6 +383,7 @@ calculateAge currentYear person =
 calculateAges : Int -> List Person -> List Int
 calculateAges currentYear people =
     List.map (calculateAge currentYear) people
+
 
 
 --Exercise 20: Calculate Future Ages (version 2)
