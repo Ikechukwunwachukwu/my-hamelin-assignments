@@ -66,17 +66,17 @@ type alias Dimensions =
 
 
 volume : Dimensions -> Float
-volume dimensions =
-    dimensions.length * dimensions.height * dimensions.breadth
+volume dimension =
+    dimension.length * dimension.height * dimension.breadth
 
 
 
 -- Calculate volumes for each dimension using the map function
 
 
-volumes : List Float
-volumes =
-    List.map volume data
+volumes : List Dimensions -> List Float
+volumes dimensions =
+    List.map volume dimensions
 
 
 
@@ -139,14 +139,9 @@ appendIndexForAll strings =
 --Task: Invert each boolean value in a list.
 
 
-invertBoolean : Bool -> Bool
-invertBoolean bool =
-    not bool
-
-
 invertBooleans : List Bool -> List Bool
 invertBooleans bools =
-    List.map invertBoolean bools
+    List.map not bools
 
 
 
@@ -167,8 +162,8 @@ type alias PriceItem =
 -- Function to format a single PriceItem into a string
 
 
-formatOnePriceItem : PriceItem -> String
-formatOnePriceItem item =
+formatPrice : PriceItem -> String
+formatPrice item =
     case item.currency of
         "Dollars" ->
             "$" ++ String.fromFloat item.amount
@@ -187,9 +182,9 @@ formatOnePriceItem item =
 -- Function to format a list of PriceItems into a list of strings
 
 
-formatPriceItems : List PriceItem -> List String
-formatPriceItems items =
-    List.map formatOnePriceItem items
+formatPrices : List PriceItem -> List String
+formatPrices items =
+    List.map formatPrice items
 
 
 
