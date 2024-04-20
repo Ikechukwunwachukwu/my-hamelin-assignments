@@ -49,7 +49,7 @@ calculateAreaOfCircle radius =
 
 calculateAreaOfCircles : List Float -> List Float
 calculateAreaOfCircles radii =
-    List.map areaOfCircle radii
+    List.map calculateAreaOfCircle radii
 
 
 
