@@ -29,8 +29,8 @@ boolToString bool =
 
 
 stringFromBool : List Bool -> List String
-stringFromBool listBool =
-    List.map boolToString listBool
+stringFromBool booleans =
+    List.map boolToString booleans
 
 
 
