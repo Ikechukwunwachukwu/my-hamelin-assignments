@@ -372,21 +372,15 @@ calculateAges currentYear people =
 -- Function to calculate the age of a person in a specific year
 
 
-ageCalculate : Int -> Person -> ( String, Int )
-ageCalculate currentYear person =
-    ( person.name
-    , if currentYear >= person.yearOfBirth then
-        currentYear - person.yearOfBirth
-
-      else
-        0
-    )
+calculateAgeV2 : Int -> Person -> ( String, Int )
+calculateAgeV2 currentYear person =
+    ( person.name, calculateAge currentYear person )
 
 
 
 -- Function to calculate the ages of people in a list for a specific year
 
 
-agesCalculate : Int -> List Person -> List ( String, Int )
-agesCalculate currentYear people =
-    List.map (ageCalculate currentYear) people
+calculateAgesV2 : Int -> List Person -> List ( String, Int )
+calculateAgesV2 currentYear people =
+    List.map (calculateAgeV2 currentYear) people
