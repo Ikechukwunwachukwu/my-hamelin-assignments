@@ -112,11 +112,13 @@ stringsToUpper strings =
 
 
 squareRoot : Float -> Float
-squareRoot : List Float -> List Float
+squareRoot float =
+    sqrt float
 
 
-squareRoots numbers =
-    List.map squareRoot numbers
+squareRoots : List Float -> List Float
+squareRoots floats =
+    List.map squareRoot floats
 
 
 
