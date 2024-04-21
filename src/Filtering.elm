@@ -78,3 +78,33 @@ type Gender
 filterAdultFemales : List Person -> List Person
 filterAdultFemales people =
     List.filter (\person -> person.age >= 18 && person.gender == Female) people
+
+
+
+--Exercise 7: Filter Positive Numbers
+--Task: Remove all non-positive numbers (zero and negatives) from a list of integers.
+
+
+filterPositiveIntegers : List Int -> List Int
+filterPositiveIntegers integers =
+    List.filter (\integer -> integer > 0) integers
+
+
+
+--Exercise 8: Filter Multiples of Five
+--Task: Filter out all numbers that are not multiples of five from a list of integers.
+
+
+filterMultiplesOfFive : List Int -> List Int
+filterMultiplesOfFive integers =
+    List.filter (\integer -> modBy 5 integer == 0) integers
+
+
+
+--Exercise 9: Filter by Length
+--Task: Write a function to exclude all elements whose length is not 5 from a list of lists.
+
+
+filterByLength : List (List Int) -> List (List Int)
+filterByLength integers =
+    List.filter (\int -> List.length int == 5) integers
