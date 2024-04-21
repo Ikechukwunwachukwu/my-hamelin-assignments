@@ -206,7 +206,8 @@ filterProductsByPrice products =
 
 
 --Exercise 15: Filter Animals by Habitat
---Task: Filter out all animals that do not live in aquatic habitat from a list. Assume each animal record includes fields for name, species, and habitat.
+--Task: Filter out all animals that do not live in aquatic habitat from a list.
+-- Assume each animal record includes fields for name, species, and habitat.
 --Context: The possible habitats for animals are as follows:
 --Aquatic: For animals living primarily in water, like sharks and whales.
 --Terrestrial: For land-dwelling animals, such as bears and rabbits.
@@ -229,3 +230,29 @@ type Habitat
 filterAquaticAnimals : List Animal -> List Animal
 filterAquaticAnimals animals =
     List.filter (\animal -> animal.habitat == Aquatic) animals
+
+
+
+--Exercise 16: Filter by Tag
+--Task: Exclude all items from a list that do not have a specific tag attached.
+--Assume each item record includes fields for item name, price, and a list of tags.
+--Your function should be able to filter by just any tag that's passed to it as argument.
+
+
+type alias Item =
+    { itemName : String
+    , price : Float
+    , tags : List Tag
+    }
+
+
+type Tag
+    = Electronics
+    | Portable
+    | Furniture
+    | Clothing
+
+
+filterItemsByTag : Tag -> List Item -> List Item
+filterItemsByTag tag items =
+    List.filter (\item -> List.member tag item.tags) items
