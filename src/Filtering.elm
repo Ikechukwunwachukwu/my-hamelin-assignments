@@ -184,3 +184,21 @@ type Permission
 filterAdminUsers : List UserPerson -> List UserPerson
 filterAdminUsers users =
     List.filter (\user -> user.permission == Admin) users
+
+
+
+--Exercise 13: Filter Products by Price
+--Task: Remove all products from a list that are priced above $5.00.
+--Assume each product record includes fields for product name, category, and price.
+
+
+type alias Product =
+    { productName : String
+    , category : String
+    , price : Float
+    }
+
+
+filterProductsByPrice : List Product -> List Product
+filterProductsByPrice products =
+    List.filter (\product -> product.price <= 5.0) products
