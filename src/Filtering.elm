@@ -202,3 +202,30 @@ type alias Product =
 filterProductsByPrice : List Product -> List Product
 filterProductsByPrice products =
     List.filter (\product -> product.price <= 5.0) products
+
+
+
+--Exercise 15: Filter Animals by Habitat
+--Task: Filter out all animals that do not live in aquatic habitat from a list. Assume each animal record includes fields for name, species, and habitat.
+--Context: The possible habitats for animals are as follows:
+--Aquatic: For animals living primarily in water, like sharks and whales.
+--Terrestrial: For land-dwelling animals, such as bears and rabbits.
+--Arboreal: For animals that live in trees, like tree frogs.
+
+
+type alias Animal =
+    { name : String
+    , species : String
+    , habitat : Habitat
+    }
+
+
+type Habitat
+    = Aquatic
+    | Terrestrial
+    | Arboreal
+
+
+filterAquaticAnimals : List Animal -> List Animal
+filterAquaticAnimals animals =
+    List.filter (\animal -> animal.habitat == Aquatic) animals
