@@ -108,3 +108,56 @@ filterMultiplesOfFive integers =
 filterByLength : List (List Int) -> List (List Int)
 filterByLength integers =
     List.filter (\int -> List.length int == 5) integers
+
+
+
+--Exercise 10: Filter Pending Tasks
+--Task: From a list of tasks, filter out all tasks that are not marked as pending.
+--Tasks can be marked as completed, pending, in progress, or under review.
+
+
+type alias Task =
+    { task : String
+    , status : Condition
+    }
+
+
+type Condition
+    = Completed
+    | Pending
+    | InProgress
+    | Review
+
+
+filterPendingTasks : List Task -> List Task
+filterPendingTasks tasks =
+    List.filter (\task -> task.status == Pending) tasks
+
+
+
+--Exercise 11: Filter Valid Emails
+--Task: Filter out all strings that do not exist in the form
+--<first-part>@<second-part>.<third-part> from a list of potential email addresses.
+
+
+filterValidEmailAdresses : List String -> List String
+filterValidEmailAdresses emails =
+    List.filter isValidEmailAddress emails
+
+
+isValidEmailAddress : String -> Bool
+isValidEmailAddress email =
+    let
+        parts =
+            String.split "@" email
+    in
+    case parts of
+        [ _, secondPart ] ->
+            let
+                domainParts =
+                    String.split "." secondPart
+            in
+            List.length domainParts == 2
+
+        _ ->
+            False
