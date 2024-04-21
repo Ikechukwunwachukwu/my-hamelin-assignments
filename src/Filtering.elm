@@ -54,3 +54,27 @@ startsWithA words =
 startsWithOthers : List String -> List String
 startsWithOthers words =
     List.filter (\word -> String.toLower (String.left 1 word) == "a") words
+
+
+
+--Exercise 6: Filter Adults by Age and Gender
+--Task: Write a function that filters out all people under 18 years old
+--or whose gender is not specified as female from a list of person records.
+--Each person record should include a name, age, and a gender.
+
+
+type alias Person =
+    { name : String
+    , age : Int
+    , gender : Gender
+    }
+
+
+type Gender
+    = Male
+    | Female
+
+
+filterAdultFemales : List Person -> List Person
+filterAdultFemales people =
+    List.filter (\person -> person.age >= 18 && person.gender == Female) people
