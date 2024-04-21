@@ -161,3 +161,26 @@ isValidEmailAddress email =
 
         _ ->
             False
+
+
+
+--Exercise 12: Filter by Permission
+--Task: Filter out all users from a list who do not have 'admin' level permissions.
+--Assume each user record includes fields for full name, username, and permission level.
+
+
+type alias UserPerson =
+    { fullName : String
+    , username : String
+    , permission : Permission
+    }
+
+
+type Permission
+    = Admin
+    | User
+
+
+filterAdminUsers : List UserPerson -> List UserPerson
+filterAdminUsers users =
+    List.filter (\user -> user.permission == Admin) users
