@@ -43,3 +43,14 @@ filterHighScores scores =
 startsWithA : List String -> List String
 startsWithA words =
     List.filter (\word -> String.toLower (String.left 1 word) /= "a") words
+
+
+
+--Exercise 5: Filter Specific Character (Case Insensitive)
+--Task: Filter out all words that do NOT start with the letter 'A',
+--regardless of case, from a list of strings.
+
+
+startsWithOthers : List String -> List String
+startsWithOthers words =
+    List.filter (\word -> String.toLower (String.left 1 word) == "a") words
