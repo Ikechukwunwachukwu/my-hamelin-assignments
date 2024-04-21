@@ -22,3 +22,13 @@ isOdd integer =
 filterShortWords : List String -> List String
 filterShortWords words =
     List.filter (\word -> String.length word >= 4) words
+
+
+
+--Exercise 3: Filter High Scores
+--Task: Develop a function to filter out scores below 75 from a list of student scores.
+
+
+filterHighScores : List Int -> List Int
+filterHighScores scores =
+    List.filter (\score -> score > 75) scores
