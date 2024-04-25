@@ -19,8 +19,8 @@ isOdd integer =
 --Task: Create a function to exclude words shorter than 4 characters from a list of strings.
 
 
-filterShortWords : List String -> List String
-filterShortWords words =
+takeOutShortWords : List String -> List String
+takeOutShortWords words =
     List.filter (\word -> String.length word >= 4) words
 
 
