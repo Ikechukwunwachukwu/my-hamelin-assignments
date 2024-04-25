@@ -118,8 +118,8 @@ positiveIntegers integers =
 --Task: Filter out all numbers that are not multiples of five from a list of integers.
 
 
-filterMultiplesOfFive : List Int -> List Int
-filterMultiplesOfFive integers =
+multiplesOfFive : List Int -> List Int
+multiplesOfFive integers =
     List.filter (\integer -> modBy 5 integer == 0) integers
 
 
