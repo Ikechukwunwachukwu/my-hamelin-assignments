@@ -93,8 +93,8 @@ type Gender
     | Female
 
 
-filterAdultFemales : List Person -> List Person
-filterAdultFemales people =
+adultFemalesOnly : List Person -> List Person
+adultFemalesOnly people =
     List.filter isAdultFemale people
 
 
