@@ -25,6 +25,10 @@ takeOutShortWords words =
 
 
 
+{- isWordShort : String -> Bool
+   isWordShort word =
+       String.length word >= 4
+-}
 --Exercise 3: Filter High Scores
 --Task: Develop a function to filter out scores below 75 from a list of student scores.
 
@@ -35,6 +39,10 @@ scoresAbove75 scores =
 
 
 
+{- isAbove75 : Int -> Bool
+   isAbove75 score =
+       score > 75
+-}
 --Exercise 4: Filter Out Words Starting with 'A'
 --Task: Create a function to filter out words that start with the letter 'A',
 --regardless of case, from a list of strings.
@@ -56,9 +64,14 @@ wordNotStartingWithA word =
 --regardless of case, from a list of strings.
 
 
-startsWithOthers : List String -> List String
-startsWithOthers words =
-    List.filter (\word -> String.toLower (String.left 1 word) == "a") words
+wordsStartWithA : List String -> List String
+wordsStartWithA words =
+    List.filter isWordStartsWithA words
+
+
+isWordStartsWithA : String -> Bool
+isWordStartsWithA word =
+    String.toLower (String.left 1 word) == "a"
 
 
 
