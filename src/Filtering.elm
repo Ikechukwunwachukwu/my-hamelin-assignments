@@ -95,7 +95,12 @@ type Gender
 
 filterAdultFemales : List Person -> List Person
 filterAdultFemales people =
-    List.filter (\person -> person.age >= 18 && person.gender == Female) people
+    List.filter isAdultFemale people
+
+
+isAdultFemale : Person -> Bool
+isAdultFemale person =
+    person.age >= 18 && person.gender == Female
 
 
 
