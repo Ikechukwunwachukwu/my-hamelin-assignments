@@ -40,9 +40,14 @@ scoresAbove75 scores =
 --regardless of case, from a list of strings.
 
 
-startsWithA : List String -> List String
-startsWithA words =
-    List.filter (\word -> String.toLower (String.left 1 word) /= "a") words
+wordsNotStartingWithA : List String -> List String
+wordsNotStartingWithA words =
+    List.filter wordNotStartingWithA words
+
+
+wordNotStartingWithA : String -> Bool
+wordNotStartingWithA word =
+    String.toLower (String.left 1 word) /= "a"
 
 
 
