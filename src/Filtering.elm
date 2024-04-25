@@ -108,8 +108,8 @@ isAdultFemale person =
 --Task: Remove all non-positive numbers (zero and negatives) from a list of integers.
 
 
-filterPositiveIntegers : List Int -> List Int
-filterPositiveIntegers integers =
+positiveIntegers : List Int -> List Int
+positiveIntegers integers =
     List.filter (\integer -> integer > 0) integers
 
 
