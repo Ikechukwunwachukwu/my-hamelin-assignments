@@ -163,8 +163,8 @@ pendingTasks tasks =
 --<first-part>@<second-part>.<third-part> from a list of potential email addresses.
 
 
-filterValidEmailAdresses : List String -> List String
-filterValidEmailAdresses emails =
+validEmailAdresses : List String -> List String
+validEmailAdresses emails =
     List.filter isValidEmailAddress emails
 
 
@@ -175,12 +175,15 @@ isValidEmailAddress email =
             String.split "@" email
     in
     case parts of
-        [ _, secondPart ] ->
+        [ firstPart, secondPart ] ->
             let
                 domainParts =
                     String.split "." secondPart
             in
-            List.length domainParts == 2
+            List.length domainParts
+                == 2
+                && not (String.isEmpty firstPart)
+                && not (String.isEmpty secondPart)
 
         _ ->
             False
