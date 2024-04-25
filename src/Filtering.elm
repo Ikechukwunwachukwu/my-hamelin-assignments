@@ -152,8 +152,8 @@ type Condition
     | Review
 
 
-filterPendingTasks : List Task -> List Task
-filterPendingTasks tasks =
+pendingTasks : List Task -> List Task
+pendingTasks tasks =
     List.filter (\task -> task.status == Pending) tasks
 
 
