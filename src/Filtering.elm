@@ -4,8 +4,8 @@ module Filtering exposing (..)
 --Task: Write a function to filter out all even numbers from a list of integers.
 
 
-filterEvenIntegers : List Int -> List Int
-filterEvenIntegers integers =
+oldNumbersOnly : List Int -> List Int
+oldNumbersOnly integers =
     List.filter isOdd integers
 
 
@@ -29,8 +29,8 @@ filterShortWords words =
 --Task: Develop a function to filter out scores below 75 from a list of student scores.
 
 
-filterHighScores : List Int -> List Int
-filterHighScores scores =
+scoresAbove75 : List Int -> List Int
+scoresAbove75 scores =
     List.filter (\score -> score > 75) scores
 
 
@@ -256,3 +256,89 @@ type Tag
 filterItemsByTag : Tag -> List Item -> List Item
 filterItemsByTag tag items =
     List.filter (\item -> List.member tag item.tags) items
+
+
+
+--Exercise 14: Filter Products by Converted Prices
+--Task: Remove all products from a list whose price, when converted to U.S. dollars,
+--is above $5.00. Each product record includes a price that is a record with fields for amount
+--and currency. Use the provided conversion rates to convert prices to U.S. dollars before filtering.
+{- Conversion Rates:
+
+   EUR to USD: 1.18
+   GBP to USD: 1.31
+   CAD to USD: 0.79
+
+   Example Inputs and Outputs
+   Input: [{productName = "Milk", category = "Dairy",
+   price = {amount = 4.00, currency = USD}},
+   {productName = "Cheese", category = "Dairy",
+   price = {amount = 5.00, currency = EUR}}]
+-}
+
+
+type alias ProductV2 =
+    { productName : String, category : String, price : Price }
+
+
+type alias Price =
+    { amount : Float, currency : Currency }
+
+
+type Currency
+    = EUR
+    | GBP
+    | USD
+    | CAD
+
+
+
+{- EUR to USD: 1.18
+   GBP to USD: 1.31
+   CAD to USD: 0.79
+-}
+
+
+convertToDollar : Price -> Price
+convertToDollar price =
+    case price.currency of
+        USD ->
+            price
+
+        EUR ->
+            { amount = price.amount * 1.18, currency = USD }
+
+        GBP ->
+            { amount = price.amount * 1.31, currency = USD }
+
+        CAD ->
+            { amount = price.amount * 0.79, currency = USD }
+
+
+filterByPrice : List ProductV2 -> List ProductV2
+filterByPrice products =
+    List.filter
+        (\product ->
+            (convertToDollar product.price).amount <= 5.0
+        )
+        products
+
+
+filterByPriceV2 : List ProductV2 -> List ProductV2
+filterByPriceV2 products =
+    List.filter fiveDollarsOrUnder products
+
+
+fiveDollarsOrUnder : ProductV2 -> Bool
+fiveDollarsOrUnder product =
+    let
+        productPrice =
+            product.price
+
+        productPriceInDollar =
+            convertToDollar productPrice
+
+        amountInDollar =
+            productPriceInDollar.amount
+    in
+    amountInDollar <= 5
